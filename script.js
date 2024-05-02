@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { nome: "Jogo de Xícaras", categoria: "Cozinha", foto: "./imagens/jogoXicara.webp", cor: "#6a717d,#ffffff", reservado: false },
         { nome: "Faqueiro", categoria: "Cozinha", foto: "./imagens/faqueiro.webp", cor: "", reservado: false },
         { nome: "Suggar", categoria: "Cozinha", foto: "./imagens/sugar.avif", cor: "#ffffff,#6a717d", reservado: false },
-        { nome: "Sanduicheira", categoria: "Cozinha", foto: "./imagens/sanduiche.webp", cor: "#000000,#6a717d", reservado: false },
+        { nome: "Sanduicheira", categoria: "Cozinha", foto: "./imagens/sanduiche.webp", cor: "#000000,#6a717d", reservado: true },
         { nome: "Purificador de Àgua ", categoria: "Cozinha", foto: "./imagens/agua.webp", cor: "#ffffff,#6a717d", reservado: false },
         { nome: "Jogo de Conchas", categoria: "Cozinha", foto: "./imagens/jogoConcha.webp", cor: "", reservado: false },
         { nome: "Cortina Cozinha", categoria: "Cozinha", foto: "./imagens/cortinaCozinha.jpg", cor: "#ffffff", reservado: false },
