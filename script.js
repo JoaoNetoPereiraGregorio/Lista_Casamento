@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { nome: "Geladeira", categoria: "Cozinha", foto: "./imagens/geladeira.webp", cor: "#6a717d,#ffffff", reservado: false },
         { nome: "Armário Cozinha", categoria: "Cozinha", foto: "./imagens/armario.jpg", cor: "#a8876a,#000000", reservado: false },
         { nome: "Mesa Cozinha 4 Cadeiras", categoria: "Cozinha", foto: "./imagens/mesa.webp", cor: "#a8876a,#000000", reservado: false },
-        { nome: "Micro-ondas", categoria: "Cozinha", foto: "./imagens/micro.jpg", cor: "#6a717d,#000000", reservado: false },
+        { nome: "Micro-ondas", categoria: "Cozinha", foto: "./imagens/micro.jpg", cor: "#6a717d,#000000", reservado: true },
         { nome: "Jogo de Pratos", categoria: "Cozinha", foto: "./imagens/prato.webp", cor: "#ffffff", reservado: true },
         { nome: "Jogo de Copos", categoria: "Cozinha", foto: "./imagens/copos.webp", cor: "", reservado: false },
         { nome: "Jogo de Xícaras", categoria: "Cozinha", foto: "./imagens/jogoXicara.webp", cor: "#6a717d,#ffffff", reservado: false },
