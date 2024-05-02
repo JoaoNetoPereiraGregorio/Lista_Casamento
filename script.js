@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
         { nome: "Mesa Cozinha 4 Cadeiras", categoria: "Cozinha", foto: "./imagens/mesa.webp", cor: "#a8876a,#000000", reservado: false },
         { nome: "Micro-ondas", categoria: "Cozinha", foto: "./imagens/micro.jpg", cor: "#6a717d,#000000", reservado: true },
         { nome: "Jogo de Pratos", categoria: "Cozinha", foto: "./imagens/prato.webp", cor: "#ffffff", reservado: true },
-        { nome: "Jogo de Copos", categoria: "Cozinha", foto: "./imagens/copos.webp", cor: "", reservado: false },
+        { nome: "Jogo de Copos", categoria: "Cozinha", foto: "./imagens/copos.webp", cor: "", reservado: true },
         { nome: "Jogo de Xícaras", categoria: "Cozinha", foto: "./imagens/jogoXicara.webp", cor: "#6a717d,#ffffff", reservado: false },
-        { nome: "Faqueiro", categoria: "Cozinha", foto: "./imagens/faqueiro.webp", cor: "", reservado: false },
+        { nome: "Faqueiro", categoria: "Cozinha", foto: "./imagens/faqueiro.webp", cor: "", reservado: true },
         { nome: "Suggar", categoria: "Cozinha", foto: "./imagens/sugar.avif", cor: "#ffffff,#6a717d", reservado: false },
         { nome: "Sanduicheira", categoria: "Cozinha", foto: "./imagens/sanduiche.webp", cor: "#000000,#6a717d", reservado: true },
         { nome: "Purificador de Àgua ", categoria: "Cozinha", foto: "./imagens/agua.webp", cor: "#ffffff,#6a717d", reservado: false },
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { nome: "Tapete Quarto", categoria: "Quarto", foto: "./imagens/tapeteSala.jpg", cor: "#ffffff,#000000", reservado: false },
         { nome: "Jogo de Cama Super King", categoria: "Quarto", foto: "./imagens/jogoCama.webp", cor: "#6a717d,#000000", reservado: false },
         { nome: "Travesseiros", categoria: "Quarto", foto: "./imagens/travesseiro.webp", cor: "", reservado: false },
-        { nome: "Jogo de Toalhas", categoria: "Quarto", foto: "./imagens/toalhas.webp", cor: "#ffffff,#6a717d", reservado: false },
+        { nome: "Jogo de Toalhas", categoria: "Quarto", foto: "./imagens/toalhas.webp", cor: "#ffffff,#6a717d", reservado: true },
 
         { nome: "Máquina de Lavar Roupas 12kg", categoria: "Lavanderia", foto: "./imagens/maquina.avif", cor: "#ffffff,#6a717d", reservado: false },
         { nome: "Armário Multiuso", categoria: "Lavanderia", foto: "./imagens/armarioLavanderia.webp", cor: "#ffffff", reservado: false },
@@ -80,7 +80,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 const categoria = produto.categoria;
                 const nome = produto.nome;
                 const nomePessoa = document.getElementById("nomePessoa").value;
+                if(nomePessoa != ""){
                 abrirWhatsApp(categoria, nome, nomePessoa);
+                }else{
+                    alert("Preencha o campo Nome!");
+                }
             });
         } else {
              itemLista.style.cursor= "default";
