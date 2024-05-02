@@ -83,6 +83,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 if(nomePessoa != ""){
                 abrirWhatsApp(categoria, nome, nomePessoa);
                 }else{
+                    
+                    document.querySelector('header').scrollIntoView({ 
+                        behavior: 'smooth' 
+                    });
                     alert("Preencha o campo Nome!");
                 }
             });
