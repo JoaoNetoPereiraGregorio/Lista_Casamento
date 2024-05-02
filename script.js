@@ -92,3 +92,8 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "https://api.whatsapp.com/send?phone=62993726328&text=" + mensagem;
     }
 });
+
+window.onload = function () {
+    const msg = "Clique no produto que deseja presentear e você será redirecionado para o WhatsApp !";
+     alert(msg);
+ }
