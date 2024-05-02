@@ -1,37 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
     const produtos = [
-        { nome: "Sofá", categoria: "Sala", foto: "./imagens/sofa.png", cor: "#6a717d" },
-        { nome: "Painel TV", categoria: "Sala", foto: "./imagens/painel.jpg", cor: "#6a717d,#a8876a,#ede1b4" },
-        { nome: "Tapete Sala", categoria: "Sala", foto: "./imagens/tapete.webp", cor: "#6a717d,#a8876a,#000000" },
-        { nome: "Cortina Blackout Sala", categoria: "Sala", foto: "./imagens/cortina.webp", cor: "#6a717d,#ffffff" },
-        { nome: "Almofada Sofá", categoria: "Sala", foto: "./imagens/almofad.webp", cor: "#ffffff" },
+        { nome: "Sofá", categoria: "Sala", foto: "./imagens/sofa.png", cor: "#6a717d", reservado: false },
+        { nome: "Painel TV", categoria: "Sala", foto: "./imagens/painel.jpg", cor: "#6a717d,#a8876a,#ede1b4", reservado: false },
+        { nome: "Tapete Sala", categoria: "Sala", foto: "./imagens/tapete.webp", cor: "#6a717d,#a8876a,#000000", reservado: false },
+        { nome: "Cortina Blackout Sala", categoria: "Sala", foto: "./imagens/cortina.webp", cor: "#6a717d,#ffffff", reservado: false },
+        { nome: "Almofada Sofá", categoria: "Sala", foto: "./imagens/almofad.webp", cor: "#ffffff", reservado: false },
 
-        { nome: "Geladeira", categoria: "Cozinha", foto: "./imagens/geladeira.webp", cor: "#6a717d,#ffffff" },
-        { nome: "Armário Cozinha", categoria: "Cozinha", foto: "./imagens/armario.jpg", cor: "#a8876a,#000000" },
-        { nome: "Mesa Cozinha 4 Cadeiras", categoria: "Cozinha", foto: "./imagens/mesa.webp", cor: "#a8876a,#000000" },
-        { nome: "Micro-ondas", categoria: "Cozinha", foto: "./imagens/micro.jpg", cor: "#6a717d,#000000" },
-        { nome: "Jogo de Pratos", categoria: "Cozinha", foto: "./imagens/prato.webp", cor: "#ffffff" },
-        { nome: "Jogo de Copos", categoria: "Cozinha", foto: "./imagens/copos.webp", cor: "" },
-        { nome: "Jogo de Xícaras", categoria: "Cozinha", foto: "./imagens/jogoXicara.webp", cor: "#6a717d,#ffffff" },
-        { nome: "Faqueiro", categoria: "Cozinha", foto: "./imagens/faqueiro.webp", cor: "" },
-        { nome: "Suggar", categoria: "Cozinha", foto: "./imagens/sugar.avif", cor: "#ffffff,#6a717d" },
-        { nome: "Sanduicheira", categoria: "Cozinha", foto: "./imagens/sanduiche.webp", cor: "#000000,#6a717d" },
-        { nome: "Purificador de Àgua ", categoria: "Cozinha", foto: "./imagens/agua.webp", cor: "#ffffff,#6a717d" },
-        { nome: "Jogo de Conchas", categoria: "Cozinha", foto: "./imagens/jogoConcha.webp", cor: "" },
-        { nome: "Cortina Cozinha", categoria: "Cozinha", foto: "./imagens/cortinaCozinha.jpg", cor: "#ffffff" },
-        { nome: "Jogo Tapete Cozinha", categoria: "Cozinha", foto: "./imagens/jogoTapete.webp", cor: "#6a717d,#000000" },
+        { nome: "Geladeira", categoria: "Cozinha", foto: "./imagens/geladeira.webp", cor: "#6a717d,#ffffff", reservado: false },
+        { nome: "Armário Cozinha", categoria: "Cozinha", foto: "./imagens/armario.jpg", cor: "#a8876a,#000000", reservado: false },
+        { nome: "Mesa Cozinha 4 Cadeiras", categoria: "Cozinha", foto: "./imagens/mesa.webp", cor: "#a8876a,#000000", reservado: false },
+        { nome: "Micro-ondas", categoria: "Cozinha", foto: "./imagens/micro.jpg", cor: "#6a717d,#000000", reservado: false },
+        { nome: "Jogo de Pratos", categoria: "Cozinha", foto: "./imagens/prato.webp", cor: "#ffffff", reservado: true },
+        { nome: "Jogo de Copos", categoria: "Cozinha", foto: "./imagens/copos.webp", cor: "", reservado: false },
+        { nome: "Jogo de Xícaras", categoria: "Cozinha", foto: "./imagens/jogoXicara.webp", cor: "#6a717d,#ffffff", reservado: false },
+        { nome: "Faqueiro", categoria: "Cozinha", foto: "./imagens/faqueiro.webp", cor: "", reservado: false },
+        { nome: "Suggar", categoria: "Cozinha", foto: "./imagens/sugar.avif", cor: "#ffffff,#6a717d", reservado: false },
+        { nome: "Sanduicheira", categoria: "Cozinha", foto: "./imagens/sanduiche.webp", cor: "#000000,#6a717d", reservado: false },
+        { nome: "Purificador de Àgua ", categoria: "Cozinha", foto: "./imagens/agua.webp", cor: "#ffffff,#6a717d", reservado: false },
+        { nome: "Jogo de Conchas", categoria: "Cozinha", foto: "./imagens/jogoConcha.webp", cor: "", reservado: false },
+        { nome: "Cortina Cozinha", categoria: "Cozinha", foto: "./imagens/cortinaCozinha.jpg", cor: "#ffffff", reservado: false },
+        { nome: "Jogo Tapete Cozinha", categoria: "Cozinha", foto: "./imagens/jogoTapete.webp", cor: "#6a717d,#000000", reservado: false },
 
-        { nome: "Cama Super King", categoria: "Quarto", foto: "./imagens/cama.jpg", cor: "" },
-        { nome: "Guarda Roupas 6 Portas", categoria: "Quarto", foto: "./imagens/guarda.webp", cor: "#000000,#a8876a" },
-        { nome: "Cortina Quarto Blackout", categoria: "Quarto", foto: "./imagens/cortinaQuarto.jpg", cor: "#6a717d,#ffffff" },
-        { nome: "Tapete Quarto", categoria: "Quarto", foto: "./imagens/tapeteSala.jpg", cor: "#ffffff,#000000" },
-        { nome: "Jogo de Cama Super King", categoria: "Quarto", foto: "./imagens/jogoCama.webp", cor: "#6a717d,#000000" },
-        { nome: "Travesseiros", categoria: "Quarto", foto: "./imagens/travesseiro.webp", cor: "" },
-        { nome: "Jogo de Toalhas", categoria: "Quarto", foto: "./imagens/toalhas.webp", cor: "#ffffff,#6a717d" },
+        { nome: "Cama Super King", categoria: "Quarto", foto: "./imagens/cama.jpg", cor: "", reservado: false },
+        { nome: "Guarda Roupas 6 Portas", categoria: "Quarto", foto: "./imagens/guarda.webp", cor: "#000000,#a8876a", reservado: false },
+        { nome: "Cortina Quarto Blackout", categoria: "Quarto", foto: "./imagens/cortinaQuarto.jpg", cor: "#6a717d,#ffffff", reservado: false },
+        { nome: "Tapete Quarto", categoria: "Quarto", foto: "./imagens/tapeteSala.jpg", cor: "#ffffff,#000000", reservado: false },
+        { nome: "Jogo de Cama Super King", categoria: "Quarto", foto: "./imagens/jogoCama.webp", cor: "#6a717d,#000000", reservado: false },
+        { nome: "Travesseiros", categoria: "Quarto", foto: "./imagens/travesseiro.webp", cor: "", reservado: false },
+        { nome: "Jogo de Toalhas", categoria: "Quarto", foto: "./imagens/toalhas.webp", cor: "#ffffff,#6a717d", reservado: false },
 
-        { nome: "Máquina de Lavar Roupas 12kg", categoria: "Lavanderia", foto: "./imagens/maquina.avif", cor: "#ffffff,#6a717d" },
-        { nome: "Armário Multiuso", categoria: "Lavanderia", foto: "./imagens/armarioLavanderia.webp", cor: "#ffffff" },
-        { nome: "Tábua de Passar Roupa", categoria: "Lavanderia", foto: "./imagens/tabua.jpg", cor: "#ffffff,#6a717d" },
+        { nome: "Máquina de Lavar Roupas 12kg", categoria: "Lavanderia", foto: "./imagens/maquina.avif", cor: "#ffffff,#6a717d", reservado: false },
+        { nome: "Armário Multiuso", categoria: "Lavanderia", foto: "./imagens/armarioLavanderia.webp", cor: "#ffffff", reservado: false },
+        { nome: "Tábua de Passar Roupa", categoria: "Lavanderia", foto: "./imagens/tabua.jpg", cor: "#ffffff,#6a717d", reservado: false },
 
 
 
@@ -73,12 +73,21 @@ document.addEventListener("DOMContentLoaded", function () {
         const nomeProduto = document.createElement("span");
         nomeProduto.textContent = produto.nome;
         itemLista.appendChild(nomeProduto);
-        itemLista.addEventListener("click", function () {
-            const categoria = produto.categoria;
-            const nome = produto.nome;
-            const nomePessoa = document.getElementById("nomePessoa").value;
-            abrirWhatsApp(categoria, nome, nomePessoa);
-        });
+
+        if (produto.reservado == false) {
+            itemLista.addEventListener("click", function () {
+                const categoria = produto.categoria;
+                const nome = produto.nome;
+                const nomePessoa = document.getElementById("nomePessoa").value;
+                abrirWhatsApp(categoria, nome, nomePessoa);
+            });
+        } else {
+             itemLista.style.cursor= "default";
+             const label = document.createElement("label");
+             label.textContent="RESERVADO";
+             label.className="reservado";
+             itemLista.appendChild(label);
+        }
 
         if (produto.categoria === "Sala") {
             salaLista.appendChild(itemLista);
