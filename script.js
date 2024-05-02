@@ -29,18 +29,18 @@ document.addEventListener("DOMContentLoaded", function () {
         { nome: "Travesseiros", categoria: "Quarto", foto: "./imagens/travesseiro.webp", cor: "" },
         { nome: "Jogo de Toalhas", categoria: "Quarto", foto: "./imagens/toalhas.webp", cor: "#ffffff,#6a717d" },
 
-        { nome: "Máquina de Lavar Roupas 12kg", categoria: "Lavanderia", foto: "./imagens/maquina.avif", cor: "#ffffff,#6a717d"},
-        { nome: "Armário Multiuso", categoria: "Lavanderia", foto: "./imagens/armarioLavanderia.webp", cor: "#ffffff"},
-        { nome: "Tábua de Passar Roupa", categoria: "Lavanderia", foto: "./imagens/tabua.jpg", cor: "#ffffff,#6a717d"},
-        
+        { nome: "Máquina de Lavar Roupas 12kg", categoria: "Lavanderia", foto: "./imagens/maquina.avif", cor: "#ffffff,#6a717d" },
+        { nome: "Armário Multiuso", categoria: "Lavanderia", foto: "./imagens/armarioLavanderia.webp", cor: "#ffffff" },
+        { nome: "Tábua de Passar Roupa", categoria: "Lavanderia", foto: "./imagens/tabua.jpg", cor: "#ffffff,#6a717d" },
 
-        
-        
-        
 
-        
 
-      
+
+
+
+
+
+
     ];
 
     const salaLista = document.getElementById("sala-lista");
@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     produtos.forEach(produto => {
         const itemLista = document.createElement("li");
+        itemLista.className = "lista"
         const img = document.createElement("img");
 
         img.src = produto.foto;
@@ -61,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const div = document.createElement("div");
             arrayCores.forEach(cor => {
                 const divCor = document.createElement("div")
-                divCor.className= "divCor"
+                divCor.className = "divCor"
                 divCor.style.backgroundColor = cor;
                 div.appendChild(divCor);
 
@@ -85,9 +86,13 @@ document.addEventListener("DOMContentLoaded", function () {
             cozinhaLista.appendChild(itemLista);
         } else if (produto.categoria === "Quarto") {
             quartoLista.appendChild(itemLista);
-        } else if (produto.categoria === "Lavanderia"){
+        } else if (produto.categoria === "Lavanderia") {
             lavanderiaLista.appendChild(itemLista);
         }
+
+
+
+
     });
 
     function abrirWhatsApp(categoria, nome, nomePessoa) {
@@ -96,9 +101,23 @@ document.addEventListener("DOMContentLoaded", function () {
         let mensagem = encodeURIComponent("Olá! Gostaria de confirmar a lista de presentes.\nCategoria: " + categoria + "\nProduto: " + nome + "\nNome: " + nomePessoa);
         window.location.href = "https://api.whatsapp.com/send?phone=62993726328&text=" + mensagem;
     }
+
+    window.addEventListener("scroll", function () {
+        var listaItems = document.querySelectorAll('.lista');
+
+        listaItems.forEach(function (item) {
+            var posicao = item.getBoundingClientRect().top;
+            var alturaDaJanela = window.innerHeight;
+
+            if (posicao < alturaDaJanela) {
+                item.classList.add('mostrar');
+            }
+        });
+    });
+
 });
 
 window.onload = function () {
     const msg = "Clique no produto que deseja presentear e você será redirecionado para o WhatsApp !";
-     alert(msg);
- }
+    alert(msg);
+}

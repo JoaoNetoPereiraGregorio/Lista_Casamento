@@ -159,3 +159,13 @@ nav ul li a:hover {
 .voltar:hover {
     text-decoration: underline;
 }
+
+.lista {
+   
+    transform: translateX(-1500px); 
+    transition: transform 1.8s ease;
+  }
+  
+  .lista.mostrar  {
+    transform: translateX(0); 
+  }
