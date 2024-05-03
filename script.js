@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { nome: "Cama Super King", categoria: "Quarto", foto: "./imagens/cama.jpg", cor: "", reservado: false },
         { nome: "Guarda Roupas 6 Portas", categoria: "Quarto", foto: "./imagens/guarda.webp", cor: "#000000,#a8876a", reservado: false },
         { nome: "Cortina Quarto Blackout", categoria: "Quarto", foto: "./imagens/cortinaQuarto.jpg", cor: "#6a717d,#ffffff", reservado: true },
-        { nome: "Tapete Quarto", categoria: "Quarto", foto: "./imagens/tapeteSala.jpg", cor: "#ffffff,#000000", reservado: false },
+        { nome: "Tapete Quarto", categoria: "Quarto", foto: "./imagens/tapeteSala.jpg", cor: "#ffffff,#000000", reservado: true },
         { nome: "Jogo de Cama Super King", categoria: "Quarto", foto: "./imagens/jogoCama.webp", cor: "#6a717d,#000000", reservado: false },
         { nome: "Travesseiros", categoria: "Quarto", foto: "./imagens/travesseiro.webp", cor: "", reservado: false },
         { nome: "Jogo de Toalhas", categoria: "Quarto", foto: "./imagens/toalhas.webp", cor: "#ffffff,#6a717d", reservado: true },
