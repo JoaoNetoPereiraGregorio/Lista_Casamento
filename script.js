@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const produtos = [
         { nome: "Sofá Retrátil/Reclinável 2 lugares", categoria: "Sala", foto: "./imagens/sofa.png", cor: "#6a717d", reservado: false },
-        { nome: "Painel TV", categoria: "Sala", foto: "./imagens/painel.jpg", cor: "#6a717d,#a8876a,#ede1b4", reservado: false },
+        { nome: "Painell TV", categoria: "Sala", foto: "./imagens/painel.jpg", cor: "#6a717d,#a8876a,#ede1b4", reservado: false },
         { nome: "Tapete Sala", categoria: "Sala", foto: "./imagens/tapete.webp", cor: "#6a717d,#a8876a,#000000", reservado: true },
         { nome: "Cortina Blackout Sala", categoria: "Sala", foto: "./imagens/cortina.webp", cor: "#6a717d,#ffffff", reservado: false },
         { nome: "Almofada Sofá", categoria: "Sala", foto: "./imagens/almofad.webp", cor: "#ffffff", reservado: false },
@@ -109,8 +109,17 @@ document.addEventListener("DOMContentLoaded", function () {
     function abrirWhatsApp(categoria, nome, nomePessoa) {
         // Substitua 'seu_numero' pelo número do WhatsApp
         // e 'mensagem' pela mensagem que você quer enviar
-        let mensagem = encodeURIComponent("Olá! Gostaria de confirmar a lista de presentes.\nCategoria: " + categoria + "\nProduto: " + nome + "\nNome: " + nomePessoa);
-        window.location.href = "https://api.whatsapp.com/send?phone=62993726328&text=" + mensagem;
+        let mensagem = "Olá! Gostaria de confirmar a lista de presentes.\nCategoria: " + categoria + "\nProduto: " + nome + "\nNome: " + nomePessoa;
+        let url="";
+       if (window.innerWidth < 600) {
+            // Se o dispositivo for móvel, abre o WhatsApp com o protocolo wa.me
+            url = `https://wa.me/${numeroTelefone}?text=${encodeURIComponent(mensagem)}`;
+          } else {
+            // Se não for móvel, abre o WhatsApp Desktop com o protocolo web.whatsapp.com
+            url = `https://web.whatsapp.com/send?phone=${numeroTelefone}&text=${encodeURIComponent(mensagem)}`;
+          }
+
+        window.location.href = url;
     }
 
     window.addEventListener("scroll", function () {
