@@ -107,11 +107,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function abrirWhatsApp(categoria, nome, nomePessoa) {
-        // Substitua 'seu_numero' pelo número do WhatsApp
-        // e 'mensagem' pela mensagem que você quer enviar
         let mensagem = "Olá! Gostaria de confirmar a lista de presentes.\nCategoria: " + categoria + "\nProduto: " + nome + "\nNome: " + nomePessoa;
         let url="";
-        const numeroTelefone = '62993726328'; 
+        const numeroTelefone = '62993726328';   
        if (window.innerWidth < 600) {
             // Se o dispositivo for móvel, abre o WhatsApp com o protocolo wa.me
             url = `https://wa.me/${numeroTelefone}?text=${encodeURIComponent(mensagem)}`;
