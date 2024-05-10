@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { nome: "Jogo de Conchas", categoria: "Cozinha", foto: "./imagens/jogoConcha.webp", cor: "", reservado: false },
         { nome: "Cortina Cozinha", categoria: "Cozinha", foto: "./imagens/cortinaCozinha.jpg", cor: "#ffffff", reservado: false },
         { nome: "Jogo Tapete Cozinha", categoria: "Cozinha", foto: "./imagens/jogoTapete.webp", cor: "#6a717d,#000000", reservado: false },
+        { nome: "Potes Herméticos de vidro", categoria: "Cozinha", foto: "./imagens/potes.webp", cor: "", reservado: false },
 
         { nome: "Cama Super King", categoria: "Quarto", foto: "./imagens/cama.jpg", cor: "", reservado: false },
         { nome: "Guarda Roupas 6 Portas", categoria: "Quarto", foto: "./imagens/guarda.webp", cor: "#000000,#a8876a", reservado: false },
@@ -33,7 +34,19 @@ document.addEventListener("DOMContentLoaded", function () {
         { nome: "Máquina de Lavar Roupas 12kg", categoria: "Lavanderia", foto: "./imagens/maquina.avif", cor: "#ffffff,#6a717d", reservado: false },
         { nome: "Armário Multiuso", categoria: "Lavanderia", foto: "./imagens/armarioLavanderia.webp", cor: "#ffffff", reservado: false },
         { nome: "Tábua de Passar Roupa", categoria: "Lavanderia", foto: "./imagens/tabua.jpg", cor: "#ffffff,#6a717d", reservado: true },
-
+ 
+        { nome: "Aviãozinho do Silvio Santos R$ 100,00", categoria: "Divertido", foto: "./imagens/silvio.webp", cor: "", reservado: false },
+        { nome: "Primeiro jantar do casal R$ 80,00", categoria: "Divertido", foto: "./imagens/jantar.avif", cor: "", reservado: false },
+        { nome: "Vaquinha Mimosa R$ 50,00", categoria: "Divertido", foto: "./imagens/mimosa.jpeg", cor: "", reservado: false },
+        { nome: "Vaquinha Adelaide R$ 150,00", categoria: "Divertido", foto: "./imagens/adelaide.jpg", cor: "", reservado: false },
+        { nome: "Conta de luz dos noivos R$ 180,00", categoria: "Divertido", foto: "./imagens/luz.jpeg", cor: "", reservado: false },
+        { nome: "Conta de água dos noivos R$ 100,00", categoria: "Divertido", foto: "./imagens/agua.jpg", cor: "", reservado: false },
+        { nome: "Conta de internet dos noivos R$ 110,00", categoria: "Divertido", foto: "./imagens/internet.webp", cor: "", reservado: false },
+        { nome: "Despedida de solteira da noiva R$ 250,00", categoria: "Divertido", foto: "./imagens/despedidaNoiva.jpg", cor: "", reservado: false },
+        { nome: "Despedida de solteiro do noivo R$ 250,00", categoria: "Divertido", foto: "./imagens/despedidaNoivo.jpeg", cor: "", reservado: false },
+        { nome: "Um ano de NETFLIX R$ 200,00", categoria: "Divertido", foto: "./imagens/netflix.png", cor: "", reservado: false },
+        { nome: "Lua de mel do casal R$ 500,00", categoria: "Divertido", foto: "./imagens/luaMel.jpeg", cor: "", reservado: false },
+    
 
     ];
 
@@ -41,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const cozinhaLista = document.getElementById("cozinha-lista");
     const quartoLista = document.getElementById("quarto-lista");
     const lavanderiaLista = document.getElementById("lavanderia-lista");
+    const divertidoLista = document.getElementById("divertido-lista")
 
     produtos.forEach(produto => {
         const itemLista = document.createElement("li");
@@ -73,22 +87,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 const categoria = produto.categoria;
                 const nome = produto.nome;
                 const nomePessoa = document.getElementById("nomePessoa").value;
-                if(nomePessoa != ""){
-                abrirWhatsApp(categoria, nome, nomePessoa);
-                }else{
-                    
-                    document.querySelector('header').scrollIntoView({ 
-                        behavior: 'smooth' 
+                if (nomePessoa != "") {
+                    abrirWhatsApp(categoria, nome, nomePessoa);
+                } else {
+
+                    document.querySelector('header').scrollIntoView({
+                        behavior: 'smooth'
                     });
                     alert("Preencha o campo Nome!");
                 }
             });
         } else {
-             itemLista.style.cursor= "default";
-             const label = document.createElement("label");
-             label.textContent="RESERVADO";
-             label.className="reservado";
-             itemLista.appendChild(label);
+            itemLista.style.cursor = "default";
+            const label = document.createElement("label");
+            label.textContent = "RESERVADO";
+            label.className = "reservado";
+            itemLista.appendChild(label);
         }
 
         if (produto.categoria === "Sala") {
@@ -99,6 +113,8 @@ document.addEventListener("DOMContentLoaded", function () {
             quartoLista.appendChild(itemLista);
         } else if (produto.categoria === "Lavanderia") {
             lavanderiaLista.appendChild(itemLista);
+        } else if (produto.categoria === "Divertido") {
+            divertidoLista.appendChild(itemLista);
         }
 
 
@@ -108,15 +124,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function abrirWhatsApp(categoria, nome, nomePessoa) {
         let mensagem = "Olá! Gostaria de confirmar a lista de presentes.\nCategoria: " + categoria + "\nProduto: " + nome + "\nNome: " + nomePessoa;
-        let url="";
-        const numeroTelefone = '62993726328';   
-       if (window.innerWidth < 600) {
+        let url = "";
+        const numeroTelefone = '62993726328';
+        if (window.innerWidth < 600) {
             // Se o dispositivo for móvel, abre o WhatsApp com o protocolo wa.me
             url = `https://wa.me/${numeroTelefone}?text=${encodeURIComponent(mensagem)}`;
-          } else {
+        } else {
             // Se não for móvel, abre o WhatsApp Desktop com o protocolo web.whatsapp.com
             url = `https://web.whatsapp.com/send?phone=${numeroTelefone}&text=${encodeURIComponent(mensagem)}`;
-          }
+        }
 
         window.location.href = url;
     }
