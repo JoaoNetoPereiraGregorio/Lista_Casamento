@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { nome: "Jogo de Conchas", categoria: "Cozinha", foto: "./imagens/jogoConcha.webp", cor: "", reservado: true },
         { nome: "Cortina Cozinha", categoria: "Cozinha", foto: "./imagens/cortinaCozinha.jpg", cor: "#ffffff", reservado: false },
         { nome: "Jogo Tapete Cozinha", categoria: "Cozinha", foto: "./imagens/jogoTapete.webp", cor: "#6a717d,#000000", reservado: false },
-        { nome: "Potes Herméticos de vidro", categoria: "Cozinha", foto: "./imagens/potes.webp", cor: "", reservado: false },
+        { nome: "Potes Herméticos de vidro", categoria: "Cozinha", foto: "./imagens/potes.webp", cor: "", reservado: true },
 
         { nome: "Cama Super King", categoria: "Quarto", foto: "./imagens/cama.jpg", cor: "", reservado: false },
         { nome: "Guarda Roupas 6 Portas", categoria: "Quarto", foto: "./imagens/guarda.webp", cor: "#000000,#a8876a", reservado: false },
