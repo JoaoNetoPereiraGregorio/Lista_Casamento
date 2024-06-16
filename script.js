@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const produtos = [
         { nome: "Sofá Retrátil/Reclinável 2 lugares", categoria: "Sala", foto: "./imagens/sofa.png", cor: "#6a717d", reservado: false },
-        { nome: "Painel TV", categoria: "Sala", foto: "./imagens/painel.jpg", cor: "#6a717d,#a8876a,#ede1b4", reservado: false },
+        { nome: "Painel TV", categoria: "Sala", foto: "./imagens/painel.jpg", cor: "#6a717d,#a8876a,#ede1b4", reservado: true },
         { nome: "Tapete Sala", categoria: "Sala", foto: "./imagens/tapete.webp", cor: "#6a717d,#a8876a,#000000", reservado: true },
         { nome: "Cortina Blackout Sala", categoria: "Sala", foto: "./imagens/cortina.webp", cor: "#6a717d,#ffffff", reservado: false },
         { nome: "Almofada Sofá", categoria: "Sala", foto: "./imagens/almofad.webp", cor: "#ffffff", reservado: false },
