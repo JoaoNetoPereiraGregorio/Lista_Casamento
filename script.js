@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const produtos = [
-        { nome: "Sofá Retrátil/Reclinável 2 lugares", categoria: "Sala", foto: "./imagens/sofa.png", cor: "#6a717d", reservado: false },
+        { nome: "Sofá Retrátil/Reclinável 2 lugares", categoria: "Sala", foto: "./imagens/sofa.png", cor: "#6a717d", reservado: true },
         { nome: "Painel TV", categoria: "Sala", foto: "./imagens/painel.jpg", cor: "#6a717d,#a8876a,#ede1b4", reservado: true },
         { nome: "Tapete Sala", categoria: "Sala", foto: "./imagens/tapete.webp", cor: "#6a717d,#a8876a,#000000", reservado: true },
         { nome: "Cortina Blackout Sala", categoria: "Sala", foto: "./imagens/cortina.webp", cor: "#6a717d,#ffffff", reservado: false },
         { nome: "Almofada Sofá", categoria: "Sala", foto: "./imagens/almofad.webp", cor: "#ffffff", reservado: false },
 
-        { nome: "Geladeira", categoria: "Cozinha", foto: "./imagens/geladeira.webp", cor: "#6a717d,#ffffff", reservado: false },
+        { nome: "Geladeira", categoria: "Cozinha", foto: "./imagens/geladeira.webp", cor: "#6a717d,#ffffff", reservado: true },
         { nome: "Armário Cozinha", categoria: "Cozinha", foto: "./imagens/armario.jpg", cor: "#a8876a,#000000", reservado: true },
         { nome: "Jogo de Panelas", categoria: "Cozinha", foto: "./imagens/panela.jpg", cor: "#6a717d,#000000,#FF0000", reservado: true },
         { nome: "Mesa Cozinha 4 Cadeiras", categoria: "Cozinha", foto: "./imagens/mesa.webp", cor: "#a8876a,#000000", reservado: true },
